@@ -119,19 +119,18 @@ Quit the server with CTRL-BREAK.
 장고 프로젝트 템플릿 홈페이지가 나타난다. 제대로 따라왔으면,  
 /admin 페이지도 정상적으로 나타나고, admin 로그인도 가능하다.  
 
----
+## 앱 추가하기
 
-# 새로운 앱 추가하기
+앱을 추가해서 API 목록을 제공하자.  
+아래 명령으로 앱을 만들고,  
 
-추가로 새로운 앱을 추가하고 싶다면 아래와 같이 만들면 된다.
-## 앱 만들기
-
-아래 명령으로 앱을 만들고, 
-```
+```bash
 $ python manage.py startapp myapi
 ```
-config/settings.py 파일 내에
-```
+
+myproject/settings.py 파일 내에 앱이름을 추가해 줘야 한다.
+
+```python
 INSTALLED_APPS = [
     "django.contrib.admin",
     ...
@@ -139,4 +138,73 @@ INSTALLED_APPS = [
     "myapi",
 ]
 ```
-추가해 줘야 한다.
+
+1. model 추가
+
+이미 생성되어 있는 `models.py` 파일에 원하는 모델을 추가한다.
+
+1. Schema 추가
+schemas.py 파일을 추가한다.  
+예제를 참고해서 내용을 넣는다.  
+
+## URL API 추가
+
+in myproject/urls.py 파일 내에 아래와 같이 전체 NinjaAPI를 추가하고, 앱 주소를 router 기능을 이용하여 추가한다.
+
+```python
+
+from ninja import NinjaAPI
+from myapi.api import api as myapi_router
+
+# from myapi.api_v2 import router as myapi_router_v2
+
+# urls_namespace doc:
+# https://django-ninja.rest-framework.com/guides/versioning/
+# Routers doc:
+# https://django-ninja.rest-framework.com/guides/routers/
+api = NinjaAPI(urls_namespace="bbbapi", version="1.0.1", title="My API")
+api.add_router("my", myapi_router)
+# api_v2 = NinjaAPI(urls_namespace="bbbapi_v2", version="2.0.1", title="My API")
+# api_v2.add_router("my", myapi_router_v2)
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    # API urls
+    path("v1/", api.urls),
+    # path("v2/", api_v2.urls),
+]
+
+```
+
+## 실행하기
+
+DB migration
+
+```bash
+$ python manage.py makemigrations && python manage.py migrate
+Migrations for 'myapi':
+  myapi\migrations\0001_initial.py
+    - Create model Department
+    - Create model Employee
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, myapi, sessions
+Running migrations:
+  Applying myapi.0001_initial... OK
+(venv) 
+
+```
+
+장고 실행
+
+```bash
+$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+```
+
+## 브라우저 확인
+
+### API openapi 문서 확인
+
+<http://localhost:8000/v1/docs>
+![실행화면](image-1.png)

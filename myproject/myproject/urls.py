@@ -16,7 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ninja import NinjaAPI
+from myapi.api import api as myapi_router
+
+# from myapi.api_v2 import router as myapi_router_v2
+
+# urls_namespace doc:
+# https://django-ninja.rest-framework.com/guides/versioning/
+# Routers doc:
+# https://django-ninja.rest-framework.com/guides/routers/
+api = NinjaAPI(urls_namespace="bbbapi", version="1.0.1", title="My API")
+api.add_router("my", myapi_router)
+# api_v2 = NinjaAPI(urls_namespace="bbbapi_v2", version="2.0.1", title="My API")
+# api_v2.add_router("my", myapi_router_v2)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    # API urls
+    path("v1/", api.urls),
+    # path("v2/", api_v2.urls),
 ]
