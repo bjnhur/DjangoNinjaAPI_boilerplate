@@ -135,8 +135,7 @@ edit_uri: blob/main/docs
 #   - pymdownx.tilde
 
 # # Page tree
-nav:
-  - Home: ../README.md
+# nav:
 # - Home: index.md
 #   # - Getting started:
 #   #   - Installation: getting-started.md
