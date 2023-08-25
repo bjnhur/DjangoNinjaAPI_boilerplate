@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="사용자 기능만 집중해서 할 수 있도록, 최초 장고 Ninja API 의 기본 틀을 잡아주는 프로젝트입니다. 프로젝트 fork해서 시작하시면 됩니다." /><meta name="author" content="Bongjun Hur" /><link rel="canonical" href="https://bjnhur.github.io/DjangoNinjaAPI_boilerplate/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>My Docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/DjangoNinjaAPI_boilerplate/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">다운로드</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">파이썬 가상 개발 환경 만들기</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">라이브러리 설치하기</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">장고프로젝트 생성</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">실행하기</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#db">DB 변경시 반드시 수행</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">최초 실행시 한번 수행하는 과정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#api">API 서버 실행하기</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">앱 추가하기</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#url-api">URL API 추가</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">실행하기</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_9">브라우저 확인</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#api-openapi">API openapi 문서 확인</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/bjnhur/DjangoNinjaAPI_boilerplate/blob/main/docs/index.md">Edit on bjnhur/DjangoNinjaAPI_boilerplate</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="django-ninja-api">Django Ninja API</h1>
+<p>Django Ninja API boilerplate 만들기, 사용자 앱을 만들어서 API를 제공하면 된다.
+사용자 기능만 집중해서 할 수 있도록, 최초 장고 Ninja API 의 기본 틀을 잡아주는 프로젝트입니다. 프로젝트 fork해서 시작하시면 됩니다.</p>
+<h2 id="_1">다운로드</h2>
+<p>zip파일을 다운로드 하던지, fork해서 사용하자</p>
+<h2 id="_2">파이썬 가상 개발 환경 만들기</h2>
+<p>다운로드 작업이 완료되면, 파이썬 가상 환경을 만든다.</p>
+<pre><code class="language-bash">python -m venv venv
+</code></pre>
+<p>수행하면 로컬 폴더에 venv 폴더가 생성된다. 단, 이 폴더는 git에 업로드 되지 않는다.<br />
+이미 .gitignore 에 등록 되어 있다.
+그럼 만든 가상환경을 activate 해야 한다.</p>
+<pre><code class="language-bash">$ source venv/Scripts/activate
+(venv) 
+</code></pre>
+<p>참고로 deactivate 시키는 방법은 그냥 <code>deactivate</code> 이렇게 타이핑하면 된다.</p>
+<pre><code class="language-bash">$ deactivate
+</code></pre>
+<h2 id="_3">라이브러리 설치하기</h2>
+<p>pip 명령을 이용하여 Djagno ninja 를 설치하도록 한다.</p>
+<pre><code class="language-bash">$ pip install django-ninja
+Collecting django-ninja
+  Using cached django_ninja-0.22.2-py3-none-any.whl (2.3 MB)
+Collecting Django&gt;=2.2
+  Using cached Django-4.2.4-py3-none-any.whl (8.0 MB)
+Collecting pydantic&lt;2.0.0,&gt;=1.6
+  Using cached pydantic-1.10.12-cp38-cp38-win_amd64.whl (2.2 MB)
+...
+Installing collected packages: typing-extensions, tzdata, sqlparse, backports.zoneinfo, asgiref, pydantic, Django, django-ninja
+Successfully installed Django-4.2.4 asgiref-3.7.2 backports.zoneinfo-0.2.1 django-ninja-0.22.2 pydantic-1.10.12 sqlparse-0.4.4 typing-extensions-4.7.1 tzdata-2023.3
+WARNING: You are using pip version 21.1.1; however, version 23.2.1 is available.
+You should consider upgrading via the 'c:\users\user1\documents\work\djangoninjaapi_boilerplate_bjnhur\venv\scripts\python.exe -m pip install --upgrade pip' command.
+(venv) 
+</code></pre>
+<h2 id="_4">장고프로젝트 생성</h2>
+<pre><code class="language-bash">$ django-admin startproject myproject
+(venv) 
+$ cd myproject/
+(venv) 
+</code></pre>
+<h2 id="_5">실행하기</h2>
+<h3 id="db">DB 변경시 반드시 수행</h3>
+<p>데이터 베이스가 변경되면 아래 과정은 반드시 수행해야 한다.<br />
+db migrate 실행</p>
+<pre><code class="language-bash">$ python manage.py makemigrations &amp;&amp; python manage.py migrate
+No changes detected
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+...
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(venv) 
+</code></pre>
+<h3 id="_6">최초 실행시 한번 수행하는 과정</h3>
+<p>슈퍼유저를 하나 만들어 둬야 admin 페이지 접근이 가능하다.<br />
+예제로 admin / abcd1234!로 일단 생성한다.</p>
+<pre><code class="language-bash">$ python manage.py createsuperuser
+Username (leave blank to use 'user1'): admin
+Email address: admin@a.com
+Password: 
+Password (again):
+Superuser created successfully.
+(venv) 
+</code></pre>
+<h3 id="api">API 서버 실행하기</h3>
+<p>아래와 같이 명령을 주면 실행해서 테스트가 가능하다. 포트넘버를 바꾸고 싶다면 8000 숫자를 변경하면 된다.</p>
+<pre><code class="language-bash">$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 22, 2023 - 11:13:08
+Django version 4.2.4, using settings 'myproject.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.
+
+</code></pre>
+<p>장고 프로젝트 템플릿 홈페이지가 나타난다. 제대로 따라왔으면,<br />
+/admin 페이지도 정상적으로 나타나고, admin 로그인도 가능하다.  </p>
+<h2 id="_7">앱 추가하기</h2>
+<p>앱을 추가해서 API 목록을 제공하자.<br />
+아래 명령으로 앱을 만들고,  </p>
+<pre><code class="language-bash">$ python manage.py startapp myapi
+</code></pre>
+<p>myproject/settings.py 파일 내에 앱이름을 추가해 줘야 한다.</p>
+<pre><code class="language-python">INSTALLED_APPS = [
+    &quot;django.contrib.admin&quot;,
+    ...
+    # Local app
+    &quot;myapi&quot;,
+]
+</code></pre>
+<ol>
+<li>model 추가</li>
+</ol>
+<p>이미 생성되어 있는 <code>models.py</code> 파일에 원하는 모델을 추가한다.</p>
+<ol>
+<li>Schema 추가
+schemas.py 파일을 추가한다.<br />
+예제를 참고해서 내용을 넣는다.  </li>
+</ol>
+<h2 id="url-api">URL API 추가</h2>
+<p>in myproject/urls.py 파일 내에 아래와 같이 전체 NinjaAPI를 추가하고, 앱 주소를 router 기능을 이용하여 추가한다.</p>
+<pre><code class="language-python">
+from ninja import NinjaAPI
+from myapi.api import api as myapi_router
+
+# from myapi.api_v2 import router as myapi_router_v2
+
+# urls_namespace doc:
+# https://django-ninja.rest-framework.com/guides/versioning/
+# Routers doc:
+# https://django-ninja.rest-framework.com/guides/routers/
+api = NinjaAPI(urls_namespace=&quot;bbbapi&quot;, version=&quot;1.0.1&quot;, title=&quot;My API&quot;)
+api.add_router(&quot;my&quot;, myapi_router)
+# api_v2 = NinjaAPI(urls_namespace=&quot;bbbapi_v2&quot;, version=&quot;2.0.1&quot;, title=&quot;My API&quot;)
+# api_v2.add_router(&quot;my&quot;, myapi_router_v2)
+
+urlpatterns = [
+    path(&quot;admin/&quot;, admin.site.urls),
+    # API urls
+    path(&quot;v1/&quot;, api.urls),
+    # path(&quot;v2/&quot;, api_v2.urls),
+]
+
+</code></pre>
+<h2 id="_8">실행하기</h2>
+<p>DB migration</p>
+<pre><code class="language-bash">$ python manage.py makemigrations &amp;&amp; python manage.py migrate
+Migrations for 'myapi':
+  myapi\migrations\0001_initial.py
+    - Create model Department
+    - Create model Employee
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, myapi, sessions
+Running migrations:
+  Applying myapi.0001_initial... OK
+(venv) 
+
+</code></pre>
+<p>장고 실행</p>
+<pre><code class="language-bash">$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+</code></pre>
+<h2 id="_9">브라우저 확인</h2>
+<h3 id="api-openapi">API openapi 문서 확인</h3>
+<p><a href="http://localhost:8000/v1/docs">http://localhost:8000/v1/docs</a>
+<img alt="실행화면" src="image-1.png" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.5.2
+Build Date UTC : 2023-08-25 03:39:30.093979+00:00
+-->
