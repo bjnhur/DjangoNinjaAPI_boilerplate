@@ -5,17 +5,21 @@ site_name: My Docs
 site_url: https://bjnhur.github.io/DjangoNinjaAPI_boilerplate/
 site_author: Bongjun Hur
 site_description: >-
-  Write your documentation in Markdown and create a professional static site in
-  minutes – searchable, customizable, in 60+ languages, for all devices
+  사용자 기능만 집중해서 할 수 있도록, 최초 장고 Ninja API 의 기본 틀을 잡아주는 프로젝트입니다. 프로젝트 fork해서 시작하시면 됩니다.
 
 # Repository
 repo_name: bjnhur/DjangoNinjaAPI_boilerplate
 repo_url: https://github.com/bjnhur/DjangoNinjaAPI_boilerplate
 edit_uri: blob/main/docs
 #####################################
-
 # extra_css:
 #   - stylesheets/extra.css
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: 'index.md'
 # theme:
 #   name: 'material'
 #   language: en  
